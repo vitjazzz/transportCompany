@@ -1,0 +1,38 @@
+<div class="main-image">
+</div>
+
+<div class="content-container" >
+    <div class="container">
+        <h2 class="content-title">Коротко про нас:</h2>
+        <p class="content-lead"></p>
+    </div>
+</div>
+
+
+<script src='//ajax.googleapis.com/ajax/libs/jquery/1/jquery.js'></script>
+
+    <script>
+      function load_service(){
+        document.getElementById("main_page").innerHTML = '<object type="text/html" data="service.html" ></object>';
+      }
+
+      function load_home(){
+        document.getElementById("main_page").innerHTML = '<object type="text/html" data="home.html" ></object>';
+      }
+
+</script>
+
+
+
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script>
+        $(function () {
+            $('.nav li a').on('click', function (e) {
+                e.preventDefault();
+                var page = $(this).attr('href');
+                $('#main_page').load(page);
+            });
+        });
+    </script>
